@@ -94,7 +94,8 @@ function App() {
               </a>
             ))}
         </div>
-        <div className="flex gap-3 w-full justify-center mt-9 items-center font-semibold pb-11">
+        {imageArray.length != 0?(
+          <div className="flex gap-3 w-full justify-center mt-9 items-center font-semibold pb-11">
           <button
             className={`rounded-md bg-white py-1 px-3 font-semibold text-black ${
               page == 1 ? "hidden" : null
@@ -118,6 +119,7 @@ function App() {
             next →
           </button>
         </div>
+        ):null}
       </div>
     </>
   );
